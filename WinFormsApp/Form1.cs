@@ -21,5 +21,10 @@ namespace WinFormsApp
 		{
 
 		}
-	}
+        private void button_1_Click(object sender, EventArgs e)
+        {
+            Form2 ToDoList = new Form2();
+            ToDoList.ShowDialog();
+        }
+    }
 }

@@ -16,5 +16,9 @@ namespace WinFormsApp
 		{
 			InitializeComponent();
 		}
+		private void button_1_Click(object sender, EventArgs e)
+		{
+			Close();
+		}
 	}
 }
