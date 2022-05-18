@@ -10,7 +10,10 @@ namespace WinFormsApp
         public Form1()
         {
             InitializeComponent();
+            
+            
         }
+        
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -27,6 +30,10 @@ namespace WinFormsApp
         private void Form1_Load(object sender, EventArgs e)
         {
             UpdateDataGridView();
+        }
+        private void SearchTextBox(object sender, EventArgs e)
+        {
+            
         }
 
         private void UpdateDataGridView()
@@ -49,11 +56,16 @@ namespace WinFormsApp
                     note.Id,
                     note.Title,
                     note.Content,
-                    note.CreateAt.ToString("dd.MM.yyyy HH:mm:ss")
+                    note.CreateAt.ToString("dd.MM.yyyy HH:mm:ss"),
                 };
 
                 dataGridView2.Rows.Add(values);
             }
+            DataGridViewCheckBoxColumn Done = new DataGridViewCheckBoxColumn();
+            Done.ValueType = typeof(bool);
+            Done.Name = "Done";
+            Done.HeaderText = "Выполнено";
+            dataGridView2.Columns.Add(Done);
         }
     }
 }
